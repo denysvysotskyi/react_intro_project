@@ -1,14 +1,14 @@
 import './App.css'
 import Header from '../Header/Header'
+import Main from '../Main/Main'
 
 const App = () => (
     <div>
       <Header />
+      <Main />
 
 
-      <main>
-        <h1> Hello React!! </h1>
-      </main>
+
     </div>
 )
 
