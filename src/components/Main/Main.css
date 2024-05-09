@@ -14,3 +14,6 @@ li {
     list-style: none;
     border-radius: 7px;
 }
+p {
+    margin-top: 15px;
+}
