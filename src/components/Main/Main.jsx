@@ -1,7 +1,7 @@
 import './Main.css'
 import List from '../List/List'
-import { data } from '../Data/data'
 import Button from '../Button/Button'
+import { data } from '../Data/data'
 import { useState } from 'react'
 
   const Main = () => {
