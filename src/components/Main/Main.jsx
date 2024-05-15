@@ -2,11 +2,13 @@ import './Main.css'
 import List from '../List/List'
 import Button from '../Button/Button'
 import { data, differences } from '../Data/data'
+import { buttons } from '../Button/Button'
 import { useState } from 'react'
 
   const Main = () => {
-    const [ content, setContent ] = useState('Click on your button')
-    const handleClick = type => setContent(type)
+
+    const [ contentType, setContentType ] = useState(null)
+    const handleClick = type => setContentType(type)
 
     return (
       <main>
@@ -14,24 +16,32 @@ import { useState } from 'react'
           <h3> Наші переваги </h3>
 
           <ul>
-            <List title = { data[0].title } description = { data[0].description }/>
-            <List { ...data[1] } />
-            <List { ...data[2] } />
-            <List { ...data[3] } />
+            {
+              data.map(item => <List key = {item.id} {...item} /> )
+            }
           </ul>
         </section>
 
         <section>
           <h3> Чим ми відрізняємось від інших </h3>
 
-          <Button onClick={ () => handleClick('clickedButton1') }> Click 1</Button>
-          <Button onClick={ () => handleClick('clickedButton2') }> Click 2</Button>
-          <Button onClick={ () => handleClick('clickedButton3') }> Click 3</Button>
+          <ul>
+            {
+              buttons.map(button => <Button key ={button.id} {...button}
+                                                                 isActive={contentType === button.name}
+                                                                 onClick={() => handleClick(button.name)}>
+              {button.name}
+            </Button>
+            )}
+          </ul>
 
-          <p> { differences[content] } </p>
+          {!contentType ? <p className={'warning'}> Click on button </p> : null}
+
+          <p> {differences[contentType]} </p>
+
         </section>
       </main>
     )
-}
+  }
 
 export default Main

@@ -17,3 +17,7 @@ li {
 p {
     margin-top: 15px;
 }
+.warning {
+    color: red;
+    font-weight: bold;
+}
