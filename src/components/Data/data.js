@@ -25,9 +25,3 @@ export const data = [
     description: 'd ddddddddd d ddddddddd ddddd ddd ddddddddd d ddddddddddd d ddddddddd'
   }
 ]
-
-export const differences = {
-  clickedButton1: '1111111111111111111dif',
-  clickedButton2: '2222222222222222222dif',
-  clickedButton3: '3333333333333333333dif'
-}
