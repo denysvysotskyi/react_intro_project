@@ -1,15 +1,32 @@
 import './Main.css'
-import MeetSection from '../MeetSection/MeetSection'
-import DifferencesSection from '../DifferencesSection/DifferencesSection'
+import MeetSection from '../Sections/MeetSection/MeetSection'
+import DifferencesSection from '../Sections/DifferencesSection/DifferencesSection'
+import IntroSection from '../Sections/IntroSection/IntroSection'
+import TabsSections from '../Sections/TabsSection/TabsSections'
+import FeedbackSection from '../Sections/FeedbackSection/FeedbackSection'
+import { useState } from 'react'
 
-  const Main = () => {
+const Main = () => {
+  const [ tab, setTab ] = useState('feedback')
 
-    return (
-      <main>
+  return (
+  <main>
+    <IntroSection />
+    <TabsSections />
+
+    { tab === 'main' && (
+      <>
         <MeetSection />
         <DifferencesSection />
-      </main>
-    )
-  }
+      </>
+    )}
+
+    { tab === 'feedback' && (
+      <FeedbackSection />
+    )}
+
+  </main>
+  )
+}
 
 export default Main

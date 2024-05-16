@@ -9,8 +9,9 @@ const Header = () => {
 
   return (
     <header>
-      <img src={ logo } alt='Логотип' />
-      <span> Тут буде час: { now.toLocaleTimeString() } </span>
+      <img src={ logo }
+           alt='Логотип' />
+      <span> Зараз: { now.toLocaleTimeString() } </span>
     </header>
   )
 }

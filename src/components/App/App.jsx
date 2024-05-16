@@ -3,10 +3,10 @@ import Header from '../Header/Header'
 import Main from '../Main/Main'
 
 const App = () => (
-    <div>
-      <Header />
-      <Main />
-    </div>
+  <>
+    <Header />
+    <Main />
+  </>
 )
 
 export default App

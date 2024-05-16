@@ -1,4 +1,4 @@
-import Button, { buttons, differences } from '../Button/Button'
+import Button, { buttons, differences } from '../../Button/Button'
 import { useState } from 'react'
 
 const DifferencesSection = () => {
