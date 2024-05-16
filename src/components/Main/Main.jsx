@@ -10,22 +10,22 @@ const Main = () => {
   const [ tab, setTab ] = useState('feedback')
 
   return (
-  <main>
-    <IntroSection />
-    <TabsSections />
+    <main>
+      <IntroSection/>
+      <TabsSections active={tab}
+                    onChange={current => setTab(current)}/>
 
-    { tab === 'main' && (
-      <>
-        <MeetSection />
-        <DifferencesSection />
-      </>
-    )}
+      {tab === 'main' && (
+        <>
+          <MeetSection/>
+          <DifferencesSection/>
+        </>
+      )}
 
-    { tab === 'feedback' && (
-      <FeedbackSection />
-    )}
-
-  </main>
+      {tab === 'feedback' && (
+        <FeedbackSection/>
+      )}
+    </main>
   )
 }
 
