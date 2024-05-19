@@ -6,11 +6,11 @@ const MeetSection = () => (
     <h3> Наші переваги </h3>
     <ul>
       {
-        data.map(item => <List key={item.id} {...item} />)
+        data.map(item => <List key={ item.id } { ...item } />)
       }
     </ul>
   </section>
-  )
+)
 
 export default MeetSection
 

@@ -12,17 +12,17 @@ const Main = () => {
   return (
     <main>
       <IntroSection/>
-      <TabsSections active={tab}
-                    onChange={current => setTab(current)}/>
+      <TabsSections active={ tab }
+                    onChange={ current => setTab(current) }/>
 
-      {tab === 'main' && (
+      { tab === 'main' && (
         <>
           <MeetSection/>
           <DifferencesSection/>
         </>
       )}
 
-      {tab === 'feedback' && (
+      { tab === 'feedback' && (
         <FeedbackSection/>
       )}
     </main>

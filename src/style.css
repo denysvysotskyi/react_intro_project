@@ -3,12 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 div {
     display: block;
 }
-
 main {
     margin: 25px 0;
     padding: 0 15px;
+}
+.control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
 }
