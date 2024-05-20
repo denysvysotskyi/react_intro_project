@@ -11,6 +11,10 @@ const TabsSections = ({ active, onChange }) => (
             onClick={ () => onChange('feedback') }>
       Обратний зв'язок
     </Button>
+    <Button isActive={ active === 'effect' }
+            onClick={ () => onChange('effect') }>
+      Ефект
+    </Button>
   </section>
 )
 

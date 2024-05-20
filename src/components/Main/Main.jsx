@@ -4,6 +4,7 @@ import DifferencesSection from '../Sections/DifferencesSection/DifferencesSectio
 import IntroSection from '../Sections/IntroSection/IntroSection'
 import TabsSections from '../Sections/TabsSection/TabsSections'
 import FeedbackSection from '../Sections/FeedbackSection/FeedbackSection'
+import EffectSection from '../Sections/EffectSection/EffectSection'
 import { useState } from 'react'
 
 const Main = () => {
@@ -24,6 +25,10 @@ const Main = () => {
 
       { tab === 'feedback' && (
         <FeedbackSection/>
+      )}
+
+      { tab === 'effect' && (
+        <EffectSection />
       )}
     </main>
   )
