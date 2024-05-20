@@ -14,7 +14,8 @@ const EffectSection = () => {
       <h3> Модальне вікно </h3>
       <Button onClick={ openModal }> Відкрити інформацію </Button>
       <Modal open={ isModalOpen }>
-        <div className={'close'} onClick={ closeModal }> X </div>
+        <div className={'close'}
+             onClick={ closeModal }> X </div>
         <h3> MODAL </h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
